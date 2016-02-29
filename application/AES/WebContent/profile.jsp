@@ -81,5 +81,9 @@ designation = rs.getString(5);
 <form action="pile.jsp" style="position:absolute; top: 75%; left: 51%;">
     <button type="submit" class="btn btn-lg btn-info">Pending</button>
 </form>
+
+<% 
+rs.close();
+conn.close(); %>
 </body>
 </html>

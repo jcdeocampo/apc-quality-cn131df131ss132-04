@@ -1,8 +1,12 @@
 <%@ page import="java.io.*,java.util.*,javax.mail.*"%>
 <%@ page import="javax.mail.internet.*,javax.activation.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat"  %>
 <%
 String result;
+
+Date date = new SimpleDateFormat("dd-MM-yyyy").parse("10-10-2010");
 
 String host = "smtp.gmail.com";
 String to = "specterhouseevan@gmail.com";
@@ -21,16 +25,15 @@ properties.put("mail.smtp.auth", "true");
 //Get the default Session object.
 Session mailsession = Session.getDefaultInstance(properties, null);
 
+
+
 try {
  MimeMessage message = new MimeMessage(mailsession);
-
  message.setFrom(new InternetAddress(from));
-
  message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-
  message.setSubject("Election returns REJECTED");
-
  message.setContent("Sent election returns rejected. Reconsolidate following the provided BEI/BOC guidelines.", "text/html; charset=utf-8");
+ message.setSentDate(date);
 
  Transport transport = mailsession.getTransport("smtps");
  transport.connect(host, from, pass);
@@ -42,18 +45,6 @@ try {
  result = "Error: Unable to send message ... redirecting";
 }
 
-/*    try{
-      MimeMessage message = new MimeMessage(mailSession);
-      message.setFrom(new InternetAddress(from));
-      message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-      message.setSubject("This is the Subject Line!");
-      message.setText("This is actual message");
-      Transport.send(message);
-      result = "Sent message successfully....";
-   }catch (MessagingException mex) {
-      mex.printStackTrace();
-      result = "Error: unable to send message....";
-   } */
 %>
 <html>
 <head>
