@@ -1,1 +1,0 @@
-# CenCaS (Central Canvassing System)
