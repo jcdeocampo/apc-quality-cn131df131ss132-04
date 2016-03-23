@@ -1,0 +1,79 @@
+package bean;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+import static bean.Provider.*;
+
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class TapatInsert {
+    public static void main(String[] args) throws Exception {
+    	
+    	InetAddress ip = null;
+    	StringBuilder sb = new StringBuilder();
+    	Date myDate = new Date();
+    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    	String myDateString = sdf.format(myDate);
+    	
+    	try {
+			
+    		ip = InetAddress.getLocalHost();
+//    		System.out.println("Current IP address : " + ip.getHostAddress());
+    		
+    		NetworkInterface network = NetworkInterface.getByInetAddress(ip);
+    			
+    		byte[] mac = network.getHardwareAddress();
+    			
+//    		System.out.print("Current MAC address : ");
+    			
+    		for (int i = 0; i < mac.length; i++) {
+    			sb.append(String.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : ""));		
+    		}
+//    		System.out.println(sb.toString());
+    			
+    	} catch (UnknownHostException e) {
+    		
+    		e.printStackTrace();
+    		
+    	} catch (SocketException e){
+    			
+    		e.printStackTrace();
+    			
+    	}
+    	
+        Class.forName(DRIVER);
+        Connection conn = DriverManager.getConnection(CONNECTION_URL);
+        PreparedStatement prep = conn.prepareStatement(
+            "insert into tapat values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+        
+        
+        prep.setString(1, "Senator");
+        prep.setString(2, "Drilon Frank");
+        prep.setString(3, "21");
+        prep.setString(4, "Precinct");
+        prep.setString(5, "0001A");
+        prep.setString(6, "Sipac-Almacen");
+        prep.setString(7, "Navotas");
+        prep.setString(8, "Second District");
+        prep.setString(9, "----");
+        prep.setString(10, "NCR");
+        prep.setString(11, ip.toString());
+        prep.setString(12, sb.toString());
+        prep.setString(13, "26.7693121300002");
+        prep.setString(14, "11.8351232199939");
+        prep.setString(15, myDateString);
+        prep.addBatch();
+
+        conn.setAutoCommit(false);
+        prep.executeBatch();
+        conn.setAutoCommit(true);
+        conn.close();
+    }
+  }
