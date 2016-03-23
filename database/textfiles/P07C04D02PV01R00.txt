@@ -1,0 +1,14 @@
+Candidacy: President
+Name: Rodrigo Duterte
+Votes: 17
+Sender level: Precinct
+Precinct: 6
+City: 4
+District: 2
+Province: 01
+Region: 00
+Sender IP: 191.168.1.12
+Sender MAC Address: T73-22-B80-GG12-K2
+Sender Latitude: 14.554729000000002
+Sender Longitude: 121.02444519999999
+Timestamp: 2016-01-24 16:42:45
