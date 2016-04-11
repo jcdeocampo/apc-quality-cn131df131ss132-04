@@ -16,7 +16,7 @@ public class Tapat {
         //stat.executeUpdate("delete from tapat where name='Jeffrey Ferrer' and candidacy='Governor';");
         //stat.executeUpdate("update tapat set candidacy = REPLACE(candidacy, 'ViceGovernor', 'Governor');");
         
-        ResultSet rs = stat.executeQuery("select * from tapat where city='Santa Marcela' and barangay = 'San Mariano';");
+        ResultSet rs = stat.executeQuery("select * from tapat where region='CAR';");
         while (rs.next()) {
             System.out.println("candidacy = " + rs.getString("candidacy"));
             System.out.println("name = " + rs.getString("name"));
