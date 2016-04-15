@@ -198,6 +198,15 @@ for(int i = 0; i < maxprecincts; i++){
 	               	</TR>
 					<%
 				}
+				else if (lineRead.startsWith("Sender level"))
+				{
+					%>	
+					<TR>
+	      	  			<TD>Sender level:</TD>
+	               		<TD> <%= lineRead.substring(14) %> </TD>
+	               	</TR>
+					<%
+				}
 				} 		
 			} 
 			bf.close();

@@ -55,20 +55,21 @@ public class TapatInsert {
         PreparedStatement prep = conn.prepareStatement(
             "insert into tapat values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
         
+        
         prep.setString(1, "Vice Mayor");
-        prep.setString(2, "Evelyn Martinez");
-        prep.setString(3, "20");
+        prep.setString(2, "Judith Trinidad");
+        prep.setString(3, "26");
         prep.setString(4, "Precinct");
-        prep.setString(5, "0026B");
-        prep.setString(6, "Cabia-an");
-        prep.setString(7, "Candoni");
-        prep.setString(8, "Sixth District");
-        prep.setString(9, "Negros Occidental");
-        prep.setString(10, "XVIII");
+        prep.setString(5, "0030B");
+        prep.setString(6, "Dumpao");
+        prep.setString(7, "Iguig");
+        prep.setString(8, "Second District");
+        prep.setString(9, "Cagayan");
+        prep.setString(10, "II");
         prep.setString(11, ip.toString());
         prep.setString(12, sb.toString());
-        prep.setString(13, "76.7693121300002");
-        prep.setString(14, "69.8351232199939");
+        prep.setString(13, "83.7693121300002");
+        prep.setString(14, "471.8351232199939");
         prep.setString(15, myDateString);
         prep.addBatch();
 

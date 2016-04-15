@@ -9,7 +9,7 @@ String result;
 Date date = new SimpleDateFormat("dd-MM-yyyy").parse("10-10-2010");
 
 String host = "smtp.gmail.com";
-String to = "specterhouseevan@gmail.com";
+String to = "fccatuncan@gmail.com";
 String from = "evanspecterhouse@gmail.com";
 String pass = "essayerhumaine";
 

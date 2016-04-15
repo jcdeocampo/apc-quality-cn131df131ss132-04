@@ -131,17 +131,13 @@
 				Connection conn = DriverManager.getConnection("jdbc:sqlite:D:/Eclipse/db/aes.db");
 				Statement stat = conn.createStatement();
 				
-				ResultSet totalduterte = stat.executeQuery("SELECT SUM(vote) as 'TOTALVOTES' FROM tapat WHERE name='Rodrigo Duterte' and region='CAR';");
-				String dutertetotal = totalduterte.getString("TOTALVOTES");
-				totalduterte.close();
-				
-				ResultSet regionNCRduterte = stat.executeQuery("SELECT DISTINCT candidacy,name,vote FROM tapat where region='XVIII' and candidacy='President';");
+				ResultSet regionNCRduterte = stat.executeQuery("SELECT DISTINCT candidacy, name, sum(vote) as total FROM tapat WHERE REGION='CAR' and candidacy='President' GROUP BY name ORDER BY total desc;");
 				while (regionNCRduterte.next()) {	    
 				    %>
 				    	<tr>
 				    		<td><%= regionNCRduterte.getString("candidacy") %></td>
 				    		<td><%= regionNCRduterte.getString("name") %></td>
-				    		<td><%= dutertetotal %></td>
+				    		<td><%= regionNCRduterte.getString("total") %></td>
 				    	</tr>
 				    <%
 				}

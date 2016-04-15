@@ -26,8 +26,8 @@ function createXmlHttpRequestObject() {
 function process() {
 	if(xmlHttp.readyState == 0 || xmlHttp.readyState == 4){
 		
-		var s = "";
-		//inputValue = encodeURIComponent(document.getElementById("userInput").value);
+		var s = "Hello World!";
+		inputValue = encodeURIComponent(document.getElementById("userInput").value);
 		divDuterte = document.getElementById("divDuterte");
 		divDuterte.innerHTML = s;
 	}
