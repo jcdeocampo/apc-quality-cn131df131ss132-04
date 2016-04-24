@@ -21,7 +21,7 @@ public class Aes {
         prep.setString(2, "user1");
         prep.setString(3, "Franz");
         prep.setString(4, "Catuncan");
-        prep.setString(5, "BEI Chairman");
+        prep.setString(5, "BOC Chairman");
         prep.setString(6, "fccatuncan@gmail.com");
         prep.addBatch();
         prep.setString(1, "jvbarriga");
@@ -35,7 +35,7 @@ public class Aes {
         prep.setString(2, "dcabral");
         prep.setString(3, "Daren");
         prep.setString(4, "Cabral");
-        prep.setString(5, "BEI Member");
+        prep.setString(5, "BOC Member");
         prep.setString(6, "franzcatuncan@yahoo.com");
         prep.addBatch();
 

@@ -41,12 +41,12 @@
 			e.printStackTrace();			
 		}
 		
-		String candidacy = null,name = null,vote = null,level = null,precinct = null,city = null, timestamp = null;
+		String candidacy = null,name = null,vote = null,level = null,precinct = null,barangay = null,city = null, timestamp = null;
 		String district = null,province = null,region = null,latitude = null,longitude = null, ipadd = null, mac = null;
 		
 		Class.forName("org.sqlite.JDBC");
 		Connection conn = DriverManager.getConnection("jdbc:sqlite:D:/Eclipse/db/aes.db");
-		PreparedStatement prep = conn.prepareStatement("insert into tapat values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+		PreparedStatement prep = conn.prepareStatement("insert into tapat values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
 
 		try {
 			while ((lineRead = bf.readLine()) != null) 
@@ -74,6 +74,11 @@
 						if (lineRead.startsWith("Precinct"))
 						{
 							precinct = lineRead.substring(10);
+							lineRead = bf.readLine();
+						}
+						if (lineRead.startsWith("Barangay"))
+						{
+							barangay = lineRead.substring(10);
 							lineRead = bf.readLine();
 						}
 						if (lineRead.startsWith("City"))
@@ -127,15 +132,16 @@
 					prep.setString(3, vote); //votes
 					prep.setString(4, level); //sender level
 					prep.setString(5, precinct); //precinct
-					prep.setString(6, city); //city
-					prep.setString(7, district); //district
-					prep.setString(8, province); //province
-					prep.setString(9, region); //region
-					prep.setString(10, ipadd); //ipadd
-					prep.setString(11, mac); //mac
-					prep.setString(12, latitude); //latitude
-					prep.setString(13, longitude); //longitude
-					prep.setString(14, timestamp); //timestamp
+					prep.setString(6, barangay); //barangay
+					prep.setString(7, city); //city
+					prep.setString(8, district); //district
+					prep.setString(9, province); //province
+					prep.setString(10, region); //region
+					prep.setString(11, ipadd); //ipadd
+					prep.setString(12, mac); //mac
+					prep.setString(13, latitude); //latitude
+					prep.setString(14, longitude); //longitude
+					prep.setString(15, timestamp); //timestamp
 					
 					prep.addBatch();				
 					conn.setAutoCommit(false);
@@ -311,7 +317,7 @@
 %>
 <html>
 <head>
-<META http-equiv="refresh" content="2;URL=pile.jsp">
+<META http-equiv="refresh" content="2;URL=asdsada.jsp">
 <title>Accept</title>
 </head>
 <body>

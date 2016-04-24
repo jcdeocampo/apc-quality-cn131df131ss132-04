@@ -9,7 +9,7 @@ String result;
 Date date = new SimpleDateFormat("dd-MM-yyyy").parse("10-10-2010");
 
 String host = "smtp.gmail.com";
-String to = "specterhouseevan@gmail.com";
+String to = "fccatuncan@gmail.com";
 String from = "evanspecterhouse@gmail.com";
 String pass = "essayerhumaine";
 
@@ -32,7 +32,7 @@ try {
  message.setFrom(new InternetAddress(from));
  message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
  message.setSubject("Election returns REJECTED");
- message.setContent("Sent election returns rejected. Reconsolidate following the provided BEI/BOC guidelines.", "text/html; charset=utf-8");
+ message.setContent("Sent election returns rejected. Reconsolidate following the provided guidelines.", "text/html; charset=utf-8");
  message.setSentDate(date);
 
  Transport transport = mailsession.getTransport("smtps");
@@ -51,7 +51,7 @@ try {
 	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <title>Sending email..</title>
-<META http-equiv="refresh" content="3;URL=http://localhost:8080/AES/pile.jsp">
+<META http-equiv="refresh" content="3;URL=http://localhost:8080/AES/asdsada.jsp">
 </head>
 <body>
 <div class="alert alert-success" style="position: absolute; top: 40%; left: 36%;">

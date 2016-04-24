@@ -64,7 +64,7 @@ designation = rs.getString(5);
 <br />
 <div class="well well-large">
 <h2 style="text-align:center;">GUIDELINES</h2>
-<h4 style="text-align:center;"> The following points below are important guidelines for all BOC / BEI personnel. <br /> Kindly read these for optimal submission of data.</h4><br>
+<h4 style="text-align:center;"> The following points below are important guidelines for all BOC personnel. <br /> Kindly read these for optimal submission of data.</h4><br>
 <center>
 <p><b>1).</b> Only use checked and registered devices as their respective specifications will be needed.</p>
 <p><b>2).</b> Ensure that you are at your assigned position as the GPS data of this area will be needed.</p>
@@ -74,11 +74,11 @@ designation = rs.getString(5);
 </center>
 </div>
 
-<form action="logoutprocess.jsp" style="position:absolute; top: 75%; left: 43%;">
+<form action="logoutprocess.jsp" style="position:absolute; top: 80%; left: 35%;">
     <button type="submit" class="btn btn-lg btn-info">Logout</button>
 </form>
 
-<form action="pile.jsp" style="position:absolute; top: 75%; left: 51%;">
+<form action="asdsada.jsp" style="position:absolute; top: 80%; left: 60%;">
     <button type="submit" class="btn btn-lg btn-info">Pending</button>
 </form>
 

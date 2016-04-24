@@ -10,7 +10,7 @@
 <div class="container">
 
       <form class="form-signin" action="loginprocess.jsp" method="post">
-        <h2 class="form-signin-heading" style="width: 30%; position: absolute;top: 8%; left: 44%;">BEI/BOC Login</h2>
+        <h2 class="form-signin-heading" style="width: 30%; position: absolute;top: 7%; left: 42.5%;">CENCAS LOGIN</h2>
         <label for="inputEmail" class="sr-only">Username</label>
         <input name="username" id="inputEmail" class="form-control" style="width: 30%; position: absolute; top: 15.9%;left: 35%;" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>

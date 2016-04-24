@@ -28,7 +28,9 @@ public class TapatInsert {
 //    		System.out.println("Current IP address : " + ip.getHostAddress());
     		
     		NetworkInterface network = NetworkInterface.getByInetAddress(ip);
-    			
+    		
+    		//byte[] mac = 
+    		
     		byte[] mac = network.getHardwareAddress();
     			
 //    		System.out.print("Current MAC address : ");
@@ -36,7 +38,7 @@ public class TapatInsert {
     		for (int i = 0; i < mac.length; i++) {
     			sb.append(String.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : ""));		
     		}
-//    		System.out.println(sb.toString());
+//   		System.out.println(sb.toString());
     			
     	} catch (UnknownHostException e) {
     		
@@ -51,22 +53,24 @@ public class TapatInsert {
         Class.forName(DRIVER);
         Connection conn = DriverManager.getConnection(CONNECTION_URL);
         PreparedStatement prep = conn.prepareStatement(
-            "insert into tapat values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+            "insert into tapat values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
         
-        prep.setString(1, "President");
-        prep.setString(2, "Roy Seneres");
-        prep.setString(3, "9");
+        
+        prep.setString(1, "Vice Mayor");
+        prep.setString(2, "Judith Trinidad");
+        prep.setString(3, "26");
         prep.setString(4, "Precinct");
-        prep.setString(5, "5");
-        prep.setString(6, "23");
-        prep.setString(7, "14");
-        prep.setString(8, "12");
-        prep.setString(9, "13");
-        prep.setString(10, ip.toString());
-        prep.setString(11, sb.toString());
-        prep.setString(12, "16.22331213000002");
-        prep.setString(13, "11.5151232199939");
-        prep.setString(14, myDateString);
+        prep.setString(5, "0030B");
+        prep.setString(6, "Dumpao");
+        prep.setString(7, "Iguig");
+        prep.setString(8, "Second District");
+        prep.setString(9, "Cagayan");
+        prep.setString(10, "II");
+        prep.setString(11, ip.toString());
+        prep.setString(12, sb.toString());
+        prep.setString(13, "83.7693121300002");
+        prep.setString(14, "471.8351232199939");
+        prep.setString(15, myDateString);
         prep.addBatch();
 
         conn.setAutoCommit(false);

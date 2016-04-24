@@ -17,7 +17,7 @@
 boolean status=LoginDao.validate(obj);
 if(status){  
 	%>
-	  <div class="alert alert-success" style="position: absolute; top: 40%; left: 33%;">
+	  <div class="alert alert-success" style="position: absolute; top: 40%; left: 32.5%;">
         <strong> You have successfully logged in!</strong> You will be redirected to page containing your guidelines
       </div>
 	

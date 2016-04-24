@@ -1,5 +1,0 @@
-INDEX VERSION 1.126
-D:\Eclipse\TrialForHell\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\705467718.index
-\AES\src
-D:\Eclipse\TrialForHell\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2392349826.index
-\AES\src
