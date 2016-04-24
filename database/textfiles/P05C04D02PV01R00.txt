@@ -1,0 +1,15 @@
+Candidacy: Vice President
+Name: Gringo Honasan
+Votes: 12
+Sender level: Precinct
+Precinct: 0020B
+Barangay: Dadaw
+City: Calayan
+District: Second District
+Province: Cagayan
+Region: II
+Sender IP: R/192.168.99.1
+Sender MAC Address: DE-25-DF-FA-D7-40
+Sender Latitude: 700.7693121300002
+Sender Longitude: 200.8351232199939
+Timestamp: 2016-05-09 06:00:00

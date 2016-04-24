@@ -1,0 +1,15 @@
+Candidacy: Senator
+Name: Lacson Panfilo
+Votes: 10
+Sender level: Precinct
+Precinct: 0054A
+Barangay: Tanyag
+City: Taguig
+District: Second District
+Province: ----
+Region: NCR
+Sender IP: Ren/172.20.10.3
+Sender MAC Address: 36-E2-FD-7E-E5-BE
+Sender Latitude: 26.7693121300002
+Sender Longitude: 11.8351232199939
+Timestamp: 2016-03-11 21:55:22
